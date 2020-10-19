@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00bce7c94e5549e48abc77fbd72b5883, type: 3}
+  m_Name: Base Enemy Setting
+  m_EditorClassIdentifier: 
+  tooCloseThreshold: 25
+  fleeTimer: 5
+  shootAtPreciseness: 0.902
+  projectileType: 1
+  detectionRadius: 100
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 51
+  minSpeed: 10
+  maxSpeed: 30
+  maxSteerForce: 20
+  targetWeight: 2
+  wayPointWeight: 2
+  boundsRadius: 1.1
+  collisionAvoidDist: 15
+  avoidCollisionWeight: 100
+  forceModifier: 2
+  rotSpeed: 3
+  maxDrag: 5
+  normalDrag: 2
+  dragLerpSpeed: 20
+  shotInaccuracy: 0
+  timeDisabled: 5

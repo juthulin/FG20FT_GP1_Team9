@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34467decbd21dbd4e8516af9c4353807, type: 3}
+  m_Name: HierarchyHeaderSettings
+  m_EditorClassIdentifier: 
+  maxLength: 38
+  minPrefixLength: 8
+  type: 0
+  customPrefix: 0
+  alignment: 0
