@@ -26,7 +26,7 @@ public class Sfx : MonoBehaviour
 
     public string tagCollisionExlusion;
 
-    private void Awake()
+    void Awake()
     {
         audioSource = GetComponent<AudioSource>();
         if (audioSourceCollisionSfx == null)
@@ -44,7 +44,7 @@ public class Sfx : MonoBehaviour
     }
 
 
-    private void OnEnable()
+    void OnEnable()
     {
         if (playRandomSfxOnEnable)
         {
@@ -52,7 +52,7 @@ public class Sfx : MonoBehaviour
         }
     }
 
-    private void PlayRandomSfx()
+    void PlayRandomSfx()
     {
         audioSource.PlayOneShot(sfx[Random.Range(0, sfx.Length)]);
     }
@@ -65,13 +65,8 @@ public class Sfx : MonoBehaviour
     }
 
 
-    private void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
-        //if (other.CompareTag(tagCollisionExlusion))
-        //{
-        //    return;
-        //}
-
         if (hasCollisionSfxOnTrigger)
         {
             audioSourceCollisionSfx.PlayOneShot(onCollisionSfx[Random.Range(0, onCollisionSfx.Length)]);
@@ -89,14 +84,8 @@ public class Sfx : MonoBehaviour
     }
 
 
-    private void OnCollisionEnter(Collision collision)
+    void OnCollisionEnter(Collision collision)
     {
-
-        //if (collision.gameObject.CompareTag(tagCollisionExlusion))
-        //{
-        //    return;
-        //}
-
         if (hasCollisionSfx)
         {
             audioSourceCollisionSfx.PlayOneShot(onCollisionSfx[Random.Range(0, onCollisionSfx.Length)]);

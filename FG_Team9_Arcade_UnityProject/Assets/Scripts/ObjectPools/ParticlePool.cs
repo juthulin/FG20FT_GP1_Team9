@@ -4,7 +4,7 @@ using UnityEngine;
 [DefaultExecutionOrder(-50)]
 public class ParticlePool : ObjectPool<ParticleType>
 {
-    [SerializeField] private List<ParticlePoolItem> particlesToPool;
+    [SerializeField] List<ParticlePoolItem> particlesToPool;
 
     public static ParticlePool Instance { get; private set; }
     

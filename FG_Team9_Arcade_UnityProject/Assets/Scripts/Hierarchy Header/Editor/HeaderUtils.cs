@@ -6,7 +6,7 @@ namespace BK.HierarchyHeader.Editor
     public static class HeaderUtils
     {
         [MenuItem("GameObject/Group Selected %g")]
-        private static void GroupSelected()
+        static void GroupSelected()
         {
             if (!Selection.activeTransform) return;
             var go = new GameObject(Selection.activeTransform.name + " Group");
@@ -26,7 +26,7 @@ namespace BK.HierarchyHeader.Editor
             Selection.activeGameObject = go;
         }
 
-        private static Vector3 FindCenterPoint(Transform[] objects)
+        static Vector3 FindCenterPoint(Transform[] objects)
         {
             if (objects.Length == 0)
                 return Vector3.zero;
@@ -51,7 +51,7 @@ namespace BK.HierarchyHeader.Editor
         }
 
         [MenuItem("GameObject/Create Header", false, 0)]
-        private static void CreateHeader()
+        static void CreateHeader()
         {
             var header = new GameObject();
 

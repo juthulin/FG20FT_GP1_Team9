@@ -5,12 +5,12 @@ public class MusicAreaManagerAndDetector : MonoBehaviour
     public MusicArea currentMusicArea;
     public MusicManager musicManager;
 
-    private void Awake()
+    void Awake()
     {
         musicManager = FindObjectOfType<MusicManager>();
     }
 
-    private void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         if(other.GetComponent<MusicArea>() != null)
         {
@@ -19,7 +19,7 @@ public class MusicAreaManagerAndDetector : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit(Collider other)
+    void OnTriggerExit(Collider other)
     {
         if (currentMusicArea != null)
         {

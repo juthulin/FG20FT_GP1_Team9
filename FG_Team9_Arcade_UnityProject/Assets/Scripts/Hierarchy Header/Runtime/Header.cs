@@ -19,7 +19,7 @@ namespace BK.HierarchyHeader
         [HideInInspector] public HeaderType type;
         [HideInInspector] public HeaderAlignment alignment;
 
-        private void OnDrawGizmos()
+        void OnDrawGizmos()
         {
             //locking the postion
             transform.position = Vector3.zero;

@@ -33,10 +33,10 @@ public class MusicManager : MonoBehaviour
 
     // Position of each music track
 
-    private float _oldIdleMusicPos;
-    private float _oldActionMusicPos;
+    float _oldIdleMusicPos;
+    float _oldActionMusicPos;
 
-    private void Awake()
+    void Awake()
     {
         if (Instance != null && Instance != this)
         {
@@ -142,7 +142,7 @@ public class MusicManager : MonoBehaviour
     }
 
 
-    private AudioClip CheckActionStingerTime(float actionClipTime)
+    AudioClip CheckActionStingerTime(float actionClipTime)
     {
         AudioClip thisStingerToPlay;
         if(actionClipTime < 0.10f) // Worse, but probably best key change check ever :DDDDD

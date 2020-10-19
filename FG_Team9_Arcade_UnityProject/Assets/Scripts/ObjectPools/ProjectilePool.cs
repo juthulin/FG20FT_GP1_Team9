@@ -4,7 +4,7 @@ using UnityEngine;
 [DefaultExecutionOrder(-50)]
 public class ProjectilePool : ObjectPool<ProjectileType>
 {
-    [SerializeField] private List<ProjectilePoolItem> projectilesToPool;
+    [SerializeField] List<ProjectilePoolItem> projectilesToPool;
 
     public static ProjectilePool Instance { get; private set; }
     

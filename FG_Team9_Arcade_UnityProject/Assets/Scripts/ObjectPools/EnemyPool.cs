@@ -4,7 +4,7 @@ using UnityEngine;
 [DefaultExecutionOrder(-50)]
 public class EnemyPool : ObjectPool<EnemyType>
 {
-    [SerializeField] private List<EnemyPoolItem> enemiesToPool;
+    [SerializeField] List<EnemyPoolItem> enemiesToPool;
 
     public static EnemyPool Instance { get; private set; }
     

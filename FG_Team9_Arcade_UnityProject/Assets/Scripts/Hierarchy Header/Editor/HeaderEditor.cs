@@ -79,15 +79,15 @@ namespace BK.HierarchyHeader.Editor
                 EditorUtility.SetDirty(header);
         }
 
-        private void OnEnable() => Undo.undoRedoPerformed += OnUndoRedo;
+        void OnEnable() => Undo.undoRedoPerformed += OnUndoRedo;
 
-        private void OnDisable() => Undo.undoRedoPerformed -= OnUndoRedo;
+        void OnDisable() => Undo.undoRedoPerformed -= OnUndoRedo;
 
         public void OnUndoRedo() => UpdateHeader(target as Header, null, true);
 
-        private bool titleChanged;
+        bool titleChanged;
 
-        private double lastChangedTime;
+        double lastChangedTime;
 
         public override void OnInspectorGUI()
         {

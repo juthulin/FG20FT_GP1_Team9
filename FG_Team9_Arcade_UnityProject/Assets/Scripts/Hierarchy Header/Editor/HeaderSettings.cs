@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
@@ -17,7 +16,7 @@ namespace BK.HierarchyHeader.Editor
         public char customPrefix;
         public HeaderAlignment alignment;
 
-        private static HeaderSettings current;
+        static HeaderSettings current;
 
         public static HeaderSettings Instance { get => GetOrCreateSettings(); }
 
@@ -50,7 +49,7 @@ namespace BK.HierarchyHeader.Editor
 
     static class SettingsRegester
     {
-        private static SerializedObject settings;
+        static SerializedObject settings;
 
         [SettingsProvider]
         public static SettingsProvider CreateMyCustomSettingsProvider()

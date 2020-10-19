@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 
 [RequireComponent(typeof(AudioSource))]
@@ -13,23 +11,18 @@ public class SfxShipEngine : MonoBehaviour
     public AudioClip engineSFXHoverMode;
     public AudioClip engineSFXAfterburnerMode;
 
-    private AudioSource _audioSource;
+    AudioSource _audioSource;
     public AudioSource hoveraudioSource;
     public Player player;
-    public PlayerMovement movement;
-
-
-
-    private void Awake()
+    
+    void Awake()
     {
         _audioSource = GetComponent<AudioSource>();
         player = GetComponentInParent<Player>();
-        movement = GetComponentInParent<PlayerMovement>();
     }
-
-
+    
     // TO DO Change system based 
-    private void FixedUpdate()
+    void FixedUpdate()
     {
         isAccelerationActivated = Input.GetKey(KeyCode.W);
 
